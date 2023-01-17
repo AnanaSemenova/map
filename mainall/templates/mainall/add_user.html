@@ -1,0 +1,59 @@
+{% extends 'mainall/template.html' %}
+
+{% block content %}
+    <div class="py-1 text-center">
+      <h1 class="header_text">Добавление пользователей</h1>
+    </div>
+
+    <div class="col-md-7 col-lg-5 mx-5">
+        <h4 class="mb-3 py-4">Информация о пользователе</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-14">
+              <label for="Name" class="form-label">Имя пользователя/Название организации</label>
+              <input type="text" class="form-control" id="Name" placeholder="Имя пользователя/Название организации" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+              <div class="col-12">
+              <label for="email" class="form-label">Почта пользователя/организации</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+              </div>
+
+            <!-- <div class="col-12">
+              <label for="login" class="form-label">Логин</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="login" placeholder="login" required="">
+              <div class="invalid-feedback">
+                  Your login is required.
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-12">
+              <label for="password" class="form-label">Пароль</label>
+              <input type="text" class="form-control" id="password" placeholder="" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="namedev" class="form-label">Название прибора</label>
+              <input type="text" class="form-control" id="namedev" placeholder="">
+            </div>
+
+          <hr class="my-4">
+          <button class="w-100 btn btn-danger btn-lg mb-1" type="submit">Добавить</button>
+          <div class="w-100"> </div>
+          <div class="w-100"> </div>
+          <div class="w-100"> </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

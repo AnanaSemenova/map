@@ -1,0 +1,38 @@
+{% extends 'mainall/template.html' %}
+
+{% block content %}
+    <div class="py-3 text-center">
+      <h1 class="header_text mt-3">Оставьте ваш отзыв/рекомендацию</h1>
+      <p class="lead mt-5">Мы работаем над тем, чтобы становиться лучше,
+          <br />
+          а для этого нам важно знать ваше мнение о сервисе, ведь комфорт и удобство пользования - главное для нас! </p>
+    </div>
+    <div class="col-sm-7 col-lg-8 mt-5 m-auto" >
+        <form method="post">
+          <div class="row g-4">
+              <div class="col-12">
+              <form>
+                {% csrf_token %}
+                {{ form.text }}
+                <span>{{ error }}</span>
+                <button onclick="sendPost(event)" class="float-end mt-4 mb-5 btn btn-danger btn-lg" type="submit">Отправить</button>
+              </form>
+          </div>
+          </div>
+        </form>
+    </div>
+
+    <script>
+        function sendPost(event){
+        let get_id = document.getElementById('id_text').value
+        fetch("post_feedback/", {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{csrf_token}}",
+            },
+            body: JSON.stringify({text: get_id})})
+        document.getElementById("id_text").value = " ";
+        console.log(get_id)
+        event.preventDefault()}
+    </script>
+{% endblock %}

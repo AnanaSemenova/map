@@ -1,0 +1,41 @@
+{% extends 'mainall/template.html' %}
+
+{% block content %}
+    <div class="py-3 text-center">
+      <h1 class="header_text mt-3">Карта кампуса Пермского университета</h1>
+      <p class="lead mt-2">На данной странице вы можете ознакомиться с картой
+          и выбрать нужный корпус для просмотра его показателей.  <br /> Не пугайтесь, вас перекинет на другую страницу.</p>
+    </div>
+
+ <div>
+    <div class = "mapcolor">
+      <img class ="map" src="mainall/static/mainall/media/mapPGU.jpg" alt="map"/>
+      <div class="legenda p-4 mb-2 bg-light mx-3">
+        <div class="container-fluid py-3">
+            <h1 class="header_text1 display-6 fw-bold">Легенда</h1>
+        <div class="spisok1 py-4" type="circle">
+
+            <li><img class ="nomer" src="mainall/static/mainall/media/1.png" alt="nomer"/><a href="/login">Корпус № 1. Физфак, Биофак</a></li>
+            <li>Корпус № 2. Мехмат, ИПФ, ФСФ</li>
+            <li>Корпус № 3. СИЯЛ</li>
+            <li>Корпус № 4. Колледж ПГНИУ</li>
+            <li>Корпус № 5. Филфак, Юрфак, СИЯЛ</li>
+            <li>Корпус № 6. Химфак</li>
+            <li>Корпус № 7. СДК, профком</li>
+            <li>Корпус № 8. Географы, Геологи</li>
+            <li>Корпус № 9. Юрфак</li>
+            <li>Корпус № 10. Спортивный</li>
+            <li>Корпус № 11. Юрфак</li>
+            <li>Корпус № 12. Эконом</li>
+            <li>Корпус ЕНИ</li>
+            <li>Общежитие № 2</li>
+            <li>Общежитие № 8</li>
+            <li>Ботанический сад</li>
+
+        </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+{% endblock %}

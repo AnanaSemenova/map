@@ -1,0 +1,81 @@
+body {
+    background-color: rgba(245.6244284275, 220.62290423416, 223.25464362293);
+}
+
+{
+    background-color: rgba(183.1381655429, -8.4933930093777, 11.678349996125);
+}
+
+div.head {
+    background-color: #dc3545;
+}
+
+h1.header_text {
+    color: #404040;
+}
+
+h1.header_text1 {
+    text-align: center;
+    color: #404040;
+}
+
+span.name {
+    color: #ffffff;
+}
+
+a.head_menu {
+    color: #ffffff;
+    font-size: large;
+}
+
+div.contacts {
+    background-color: #404040;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.spisok {
+    font-size: x-large;
+}
+
+.spisok1 {
+    font-size: large;
+    list-style-type: none;
+}
+
+a.link_form {
+    color: #ffffff;
+}
+
+.map {
+    width: 850px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+
+.mapcolor {
+    background-color: #dc3545;
+    margin-bottom: 40px;
+}
+
+.legenda {
+    width: 400px;
+    height: 575px;
+    position: relative;
+    left: -60px;
+    float: right;
+    margin-top: 30px;
+}
+
+
+.nomer {
+    width: 30px;
+    margin-right: 10px;
+}
+

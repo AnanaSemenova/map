@@ -1,0 +1,94 @@
+{% extends 'mainall/template.html' %}
+
+{% block content %}
+   <div class="p-5 mb-4 bg-light rounded-3 mx-5">
+      <div class="container-fluid py-5">
+        <h1 class="header_text display-5 fw-bold">О проекте</h1>
+        <p class="col-md-20 fs-4 py-4">Карта здоровья ПГНИУ – это студенческий проект, изначально созданный для удобства отслеживания характеристик
+            важных показателей кампуса университета, таких как влажность, освещенность и тд. Результаты данной работы вы можете увидеть во вкладке
+            “Карта ПГУ”. Сейчас данный ресурс также может использоваться для хранения и визуализации иных данных,
+            важных для конкретных людей/организаций.
+        </p>
+      </div>
+    </div>
+
+    <div class="p-5 mb-4 bg-light rounded-3 mx-5">
+      <div class="container-fluid py-5">
+        <h1 class="header_text display-5 fw-bold">Возможности ресурса</h1>
+      <ul class="spisok py-4" type="circle">
+
+          <li>Просматривать показатели (н-р температуру) как всего кампуса ПГНИУ, так и отдельных помещений.</li>
+          <li>Отправить заявку на хранение и визуализацию собственных данных.</li>
+          <li>Отслеживать важные для вас показатели в режиме реального времени  и отправлять данные нам для визуализации (доступно для зарегистрированных пользователей).</li>
+          <li>Быть в курсе событий проекта – блок “Новости”.</li>
+          <li>Отправить нам свой отзыв или рекомендации по улучшению данного ресурса.</li>
+
+      </ul>
+      </div>
+    </div>
+
+    <section class="py-1 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="header_text">Новости ресурса</h1>
+        <h5 class="header_text text-muted mt-3">Узнавайте первым про самые интересные события проекта!</h5>
+      </div>
+    </div>
+    </section>
+
+    <div class="album py-3 mb-4">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Фотография</text></svg>
+
+            <div class="card-body">
+              <p class="card-text">Выходим на новый уровень! Скоро сайт станет доступен не только русскоязычным пользователям, но и иностранцам.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Читать</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger">Ред.</button>
+                </div>
+                <small class="text-muted">24.02.2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Фотография</text></svg>
+
+            <div class="card-body">
+              <p class="card-text">Теперь в разделе "Карта ПГНИУ" можно увидеть не только средние характеристики по корпусу, но и посмотреть показатели отдельных аудиторий.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Читать</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger">Ред.</button>
+                </div>
+                <small class="text-muted">03.02.2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Фотография</text></svg>
+
+            <div class="card-body">
+              <p class="card-text">Зарегистрированным пользователем портала стала доступна возможность изменять пароль для входа на сайт.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Читать</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger">Ред.</button>
+                </div>
+                <small class="text-muted">15.01.2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

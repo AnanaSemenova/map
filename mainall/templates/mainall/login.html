@@ -1,0 +1,46 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'mainall/css/styles.css' %}" type="text/css" />
+</head>
+<body>
+    <div class="head d-flex flex-column flex-md-row align-items-center mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <a href="/">
+            <img class="logo" src="{% static 'mainall/media/logoPGY.png' %}" alt="logo" />
+        </a>
+        <span class="name fs-4">Карта здоровья умного кампуса</span>
+      </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 mx-4 ms-auto md-auto">
+        <a class="head_menu me-3 py-2 text-decoration-none" href="/map_PGU">Карта ПГНИУ</a>
+        <a class="head_menu me-3 py-2 text-decoration-none" href="/feedback">Обратная связь</a>
+    </nav>
+
+    </div>
+        <main class="form-signin mt-5 w-25 m-auto">
+            <form align="center">
+    <h1 class="header_text h3 mb-5 fw-normal">Авторизация</h1>
+
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <a class="w-100 btn btn-lg btn-danger" href="/" type="submit">Войти</a>
+    <p class="mt-5 mb-3 text-muted">©2022</p>
+  </form>
+        </main>
+</body>
+</html>
