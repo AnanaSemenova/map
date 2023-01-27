@@ -3,6 +3,7 @@ from .models import Reviews
 from .forms import ReviewsForm
 from .forms import AdditionalUsersForm
 from django.http.response import JsonResponse
+from models import AdditionalUsers
 import json
 
 
@@ -44,6 +45,14 @@ def add_user(request):
         form = AdditionalUsersForm(request.POST)
         if form.is_valid():
             form.save()
+            r = request.post('http://elastic:iTTG7Yd5AZuJjhgUbDqp@localhost:9200/_security/user/polsovatel', json=
+            {
+                "full_name": AdditionalUsers.name_pol,
+                "email": AdditionalUsers.mail,
+                "password": AdditionalUsers.pas,
+                "enabled": "true",
+                "roles": [ "kibana_admin", "" ],
+            })
         else:
             error = 'ПОЖАЛУЙСТА, ПРОВЕРЬТЕ КОРРЕКТНОЕ ЗАПОЛНЕНИЕ ВСЕХ ПОЛЕЙ'
 
