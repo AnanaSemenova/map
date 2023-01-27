@@ -3,7 +3,7 @@ from .models import Reviews
 from .forms import ReviewsForm
 from .forms import AdditionalUsersForm
 from django.http.response import JsonResponse
-from models import AdditionalUsers
+from .models import AdditionalUsers
 import json
 
 
