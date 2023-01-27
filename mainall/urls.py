@@ -9,5 +9,6 @@ urlpatterns = [
     path('login', views.login),
     path('add_user', views.add_user),
     path('add_devices', views.add_devices),
-    path('map_PGU', views.map_PGU)
+    path('map_PGU', views.map_PGU),
+    path('indexforpolsovatel', views.indexforpolsovatel)
 ]

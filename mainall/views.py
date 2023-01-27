@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Reviews
 from .forms import ReviewsForm
+from .forms import AdditionalUsersForm
 from django.http.response import JsonResponse
 import json
 
@@ -37,12 +38,25 @@ def post_feedback(request):
         return JsonResponse({'msg': 'ne ok'})
 
 
+def add_user(request):
+    error = ''
+    if request.method == 'POST':
+        form = AdditionalUsersForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = 'ПОЖАЛУЙСТА, ПРОВЕРЬТЕ КОРРЕКТНОЕ ЗАПОЛНЕНИЕ ВСЕХ ПОЛЕЙ'
+
+    form = AdditionalUsersForm()
+    context = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'mainall/add_user.html', context)
+
+
 def login(request):
     return render(request, 'mainall/login.html')
-
-
-def add_user(request):
-    return render(request, 'mainall/add_user.html')
 
 
 def add_devices(request):
@@ -51,3 +65,8 @@ def add_devices(request):
 
 def map_PGU(request):
     return render(request, 'mainall/map_PGU.html')
+
+
+def indexforpolsovatel(request):
+    return render(request, 'mainall/indexforpolsovatel.html')
+
