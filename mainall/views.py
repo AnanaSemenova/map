@@ -44,15 +44,15 @@ def add_user(request):
     if request.method == 'POST':
         form = AdditionalUsersForm(request.POST)
         if form.is_valid():
-            form.save()
-            r = request.post('http://elastic:iTTG7Yd5AZuJjhgUbDqp@localhost:9200/_security/user/polsovatel', json=
+            new_user = form.save()
+            '''r = request.post('http://elastic:iTTG7Yd5AZuJjhgUbDqp@localhost:9200/_security/user/polsovatel', json=
             {
-                "full_name": AdditionalUsers.name_pol,
-                "email": AdditionalUsers.mail,
-                "password": AdditionalUsers.pas,
+                "full_name": new_user.name_pol,
+                "email": new_user.mail, 
+                "password": new_user.pas,
                 "enabled": "true",
                 "roles": [ "kibana_admin", "" ],
-            })
+            })'''
         else:
             error = 'ПОЖАЛУЙСТА, ПРОВЕРЬТЕ КОРРЕКТНОЕ ЗАПОЛНЕНИЕ ВСЕХ ПОЛЕЙ'
 
